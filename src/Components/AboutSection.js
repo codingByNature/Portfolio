@@ -1,8 +1,10 @@
 import profilepicjoe from '../Images/profilepicjoe.JPG';
+// Styles import
+import styled from 'styled-components';
 
 const AboutSection = () => {
 	return (
-		<section>
+		<section className='aboutSection-container'>
 			<div className='description'>
 				<div className='title'>
 					<div className='hide'>
@@ -17,17 +19,22 @@ const AboutSection = () => {
 						<h2>true.</h2>
 					</div>
 					<p>
-						Contact us for any photography or videography ideas that you have,
-						we have professionals with amazing skills
+						Developing User Interfaces
 					</p>
-					<button>Contact Us</button>
+					<button>Contact</button>
 				</div>
-				<div className='image'>
+				<Image>
 					<img src={profilepicjoe} alt='Developer Joe' />
-				</div>
+				</Image>
 			</div>
 		</section>
 	);
 };
 
+// styled components
+const Image = styled.div`
+	img {
+		width: 50%;
+	}
+`;
 export default AboutSection;
